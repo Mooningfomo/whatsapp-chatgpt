@@ -1,0 +1,27 @@
+- Updated the base image to `node:bullseye-slim`
+- Removed environment variables related to prefixes
+- Added `REPLY_SELF_ENABLED` environment variable
+- Updated the package manager and installed chromium
+- Installed `vite-node` package
+- Installed chromium using apt-get
+- Added instructions for installation
+- Changed the value of `prefixEnabled` to `true`
+- Changed `gpt
+
+[docker-compose.yml]
+- Remove environment variables `GPT_PREFIX`, `DALLE_PREFIX` and `REPLY_SELF_ENABLED`
+[Dockerfile]
+- Change the base image from `node:18-alpine` to `node:bullseye-slim`
+- Remove environment variables related to prefixes
+- Add `REPLY_SELF_ENABLED` environment variable
+- Update the package manager and install chromium
+- Install `vite-node` package
+- Install chromium using apt-get
+[README.md]
+- Remove the GPT_PREFIX, DALLE_PREFIX, and REPLY_SELF_ENABLED variables from the README.md file
+- Add instructions for installation
+[src/index.ts]
+- Changed the value of `prefixEnabled` from `process.env.PREFIX_ENABLED == "true"` to `true`
+- Changed `gptPrefix` to `!gpt`
+- Changed `dallePrefix` to `!dalle`
+- Changed the initialization of the `whatsapp` client
